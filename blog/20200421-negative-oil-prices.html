@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Financial Markets Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="blog-styles.css" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164217576-1"></script>
 <script>
@@ -9,13 +10,27 @@
   gtag('js', new Date());
   gtag('config', 'UA-164217576-1');
 </script>
+<style>
+table {
+  width: 100%;
+  max-width: 700px;
+  border: 0;
+  spacing: 0;
+  padding: 0;
+}
+img {
+  width: 500;
+  max-width: 100%;
+}
+</style>
 </head>
 <body>
 
-<p><font face="Arial" size="+3" color="#000066"><b>The Financial Markets Blog</b></font><font face="Verdana" size="+1" color="#EE3300"> by Johan Hombert</font></p>
-<p><font face="Verdana" color="#000066">Making sense of financial markets using HEC Paris finance courses.</font></p>
-<p><font face="Verdana" color="#000066">Follow on Twitter <a href="https://twitter.com/FMblog_jh" target="_blank">@FMblog_jh</a></font></p>
-<p>&nbsp;</p>
+<script src="title.js"></script>
+
+<table>
+<tr>
+<td>
 
 <p class="date">April 21, 2020</p>
 
@@ -23,7 +38,7 @@
 
 <p class="text">You probably heard that <a href="https://www.ft.com/content/a5292644-958d-4065-92e8-ace55d766654" target="_blank">oil price is below zero for the first time in history</a>. The screenshot below was sent to me by a student. The column "Last" shows the prices of futures oil contracts for several contract maturities. Remember that a futures contract calls for the delivery of the underlying asset (here: oil) at the maturity of the contract (May 2020, June 2020, etc.)</p>
 
-<p align="center"><img src="20200421.png" width="500" border="0"></p>
+<img src="20200421.png">
 
 <p class="text">The amazing fact is that the contract for delivery in May has a negative price. It means that sellers are paying buyers for taking oil off their hands in May! But notice this is only true at short maturities: the June contract has a positive price as one would normally expect. How can we explain this pattern using what we learnt in Financial Markets?</p>
 
@@ -48,6 +63,10 @@ C(0,T) = cost of storing oil between today and time T</p>
 <a href="20200424-covid-market-crash-part1"><span class="more">Next post: Were stock prices too high before Covid-19? &#187;</span></a><br>
 <a href="/blog"><span class="more">Home &#187;</span></a>
 <br>&nbsp;</p>
+
+</td>
+</tr>
+</table>
 
 </body>
 </html>

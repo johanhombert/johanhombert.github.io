@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Financial Markets Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="blog-styles.css" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164217576-1"></script>
 <script>
@@ -9,13 +10,23 @@
   gtag('js', new Date());
   gtag('config', 'UA-164217576-1');
 </script>
+<style>
+table {
+  width: 100%;
+  max-width: 700px;
+  border: 0;
+  spacing: 0;
+  padding: 0;
+}
+</style>
 </head>
 <body>
 
-<p><font face="Arial" size="+3" color="#000066"><b>The Financial Markets Blog</b></font><font face="Verdana" size="+1" color="#EE3300"> by Johan Hombert</font></p>
-<p><font face="Verdana" color="#000066">Making sense of financial markets using HEC Paris finance courses.</font></p>
-<p><font face="Verdana" color="#000066">Follow on Twitter <a href="https://twitter.com/FMblog_jh" target="_blank">@FMblog_jh</a></font></p>
-<p>&nbsp;</p>
+<script src="title.js"></script>
+
+<table>
+<tr>
+<td>
 
 <p class="date">April 24, 2020</p>
 
@@ -25,7 +36,7 @@
 
 <p class="text">In this post, we will use the tools learnt in Financial Markets to answer both questions, starting with the latter.</p>
 
-<p align="center"><img src="20200424.png" width="500" border="0"></p>
+<img src="20200424.png" width="100%" border="0">
 
 <p class="text">Today, let us study whether we can make sense of the level of stock prices before Covid. On the two graphs above, the S&P 500 and the EuroStoxx 50 are normalized such that they both start from a value of one on January 1st, 2020. We could have plotted the actual index levels (for instance, the S&P 500 was at 3258 on January 1st) but the absolute level of an index has no economic meaning. All that matters is the evolution of the index over time. That's why we can as well start from a value of one to make the numbers more readable as well as more easily comparable across markets.</p>
 
@@ -61,6 +72,10 @@ g = growth rate of dividends</p>
 <a href="20200426-covid-market-crash-part2"><span class="more">Next post: Did the stock market over-react to Covid-19? &#187;</span></a><br>
 <a href="/blog"><span class="more">Home &#187;</span></a>
 <br>&nbsp;</p>
+
+</td>
+</tr>
+</table>
 
 </body>
 </html>
