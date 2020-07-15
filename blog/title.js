@@ -4,7 +4,7 @@ document.write('\
 \
 <p><font face="Verdana" color="#000066">Making sense of financial markets using HEC Paris finance courses</font></p>\
 \
-<p class="text">Follow on <a href="https://twitter.com/FMblog_jh" target="_blank">Twitter</a> <a href="https://www.linkedin.com/in/johan-hombert-8467671a7/detail/recent-activity/shares/" target="_blank">LinkedIn</a></p>\
+<p class="text">Follow on <a href="https://twitter.com/FMblog_jh" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/in/johan-hombert-8467671a7/detail/recent-activity/shares/" target="_blank">LinkedIn</a></p>\
 \
 <p>&nbsp;</p>\
 \
