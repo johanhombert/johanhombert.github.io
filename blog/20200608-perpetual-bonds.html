@@ -18,10 +18,6 @@ table {
   spacing: 0;
   padding: 0;
 }
-img {
-  width: 500;
-  max-width: 100%;
-}
 </style>
 </head>
 <body>
@@ -42,7 +38,7 @@ img {
 
 <p class="text">Perpetual bonds seems like a great idea &ndash; cheap financing and no roll-over risk. Buy wait a minute, how do we know the interest rate on a perpetual bond is low if perpetual bonds don't exist (yet)? Let us look up the euro yield curve on the <a href="https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_area_yield_curves/html/index.en.html" target="_blank">website of the ECB</a>:</p>
 
-<img src="20200608.png">
+<img width="100%" src="20200608.png">
 
 <p class="text">What should be the yield of a perpetual bond? We need to remember the definition of the yield from the Financial Markets course: the yield is the average interest rate across all coupon maturities weighted by the present value of each coupon. It is impossible to do this calculation for a perpetual bond, because we do not observe interest rates until infinite maturity. The above yield curve stops at 30 years because there exist few bonds with maturity longer than 30 years. We can try to extrapolate the yield curve up to maturities of 40 years and perhaps 50 years, but it is virtually impossible to know what the yield curve looks like beyond 50 years. Since a perpetual bond derives a large fraction of its value from coupons paid beyond 50 years, the yield curve tells us little about what the yield of a perpetual bond will be. If it turns out the yield is in fact 2%, a perpetual bond will be a costly source of financing compared to issuing 10-year bonds which currently trade at interest rates below 0%.</p>
 
