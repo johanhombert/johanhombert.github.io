@@ -13,7 +13,7 @@ a:hover, a:active {
 }
 .subtitle {
 	font-family: "Arial";
-	font-size: 18px;
+	font-size: 20px;
 	color: #000066;
 	font-weight: bold;
 }
@@ -24,11 +24,12 @@ a:hover, a:active {
 }
 .text {
 	font-family: "Times New Roman";
-	font-size: 16px;
+	line-height: 1.5;
+	font-size: 18px;
 }
 .more {
 	font-family: "Times New Roman";
-	font-size: 16px;
+	font-size: 18px;
 	text-decoration: none;
 	color: #EE3300;
 }
