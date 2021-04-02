@@ -20,6 +20,15 @@ table {
   spacing: 0;
   padding: 0;
 }
+img {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  spacing: 0;
+  padding: 0;
+}
 </style>
 </head>
 <body>
@@ -40,9 +49,10 @@ table {
 
 <p class="text">To assess whether stock prices have become more informative over time as AI was deployed in financial markets, we need an objective way to measure stock price informativeness. To be specific, we need a measure of whether the stock price of a company today is a good predictor of the profitability of the company in the future. Answering this question for today's stock prices is not possible because we do not know the future. However, it is possible to determine whether the stock market was informative in the past because, with the benefit of hindsight, we know today whether stock prices in the past were right or wrong.</p>
 
-<p class="text">In an article published in 2016 the Journal of Financial Economics, three researchers<sup><a href="#bps">[1]</a></sup> followed this idea to assess whether the US stock market has become more informative over time. The figure below shows stock market informativeness over 50 years. A note at the bottom of the page explains how exactly they constructed the measure of informativeness.<sup><a href="#technote">[technical note]</a></sup></p>
+<p class="text">In an article published in 2016 the Journal of Financial Economics, three researchers<sup><a href="#bps">[1]</a></sup> followed this idea to assess whether the US stock market has become more informative over time. Figure 1 below shows stock market informativeness over 50 years. A note at the bottom of the page explains how exactly they constructed the measure of informativeness.<sup><a href="#technote">[technical note]</a></sup></p>
 
-<img width="100%" src="temp.png">
+<center><span class="text"><b>Figure 1:</b> Market informativeness has trended up over time</span><br>
+<img width="100%" src="temp.png"></center>
 
 <p class="text">The data shows a clear positive trend in market informativeness. That is, the stock market has become more informative over time. One point for AI.</p>
 
@@ -76,7 +86,7 @@ table {
 
 <p class="text" id="dff">[3] The working paper on short-term versus long-term forecasting accuracy is Dessaint, Frésard and Foucault, Does Alternative Data Improve Financial Forecasting? The Horizon Effect <a href="https://johanhombert.github.io/papers/Dessaint_ Foucault_ Fresard.pdf" target="_blank">[pdf]</a> Olivier Dessaint is a graduate of the HEC PhD program, now Associate Professor at Insead. Thierry Foucault is finance Professor at HEC and scientific co-director of the Hi!Paris Center that studies applications of articifial intelligence in finance and other fields.</p>
 
-<p class="text" id="technote"><i>Technical note.</i> To construct their measure of price informative, Bai, Philippon and Savov estimate a model that forecasts future earnings based on current accounting information. They calculate the R-square of the model, which measures how well the accounting variables used in the model predicts future earnings. They then add the current stock price to the model, re-estimate it, and look at how much the R-square improves. The increase in R-square between the model that does not use the stock price information and the model that does (called the partial R-square) measures the contribution of the stock price information to forecast future earnings. This is what is plotted on the figure above. The red line corresponds to the model forecasting earnings at a five year horizon and the blue line to the model forecasting earnings at a one year horizon.</p>
+<p class="text" id="technote"><i>Technical note.</i> To construct their measure of price informative, Bai, Philippon and Savov estimate a model that forecasts future earnings based on current accounting information. They calculate the R-square of the model, which measures how well the accounting variables used in the model predicts future earnings. They then add the current stock price to the model, re-estimate it, and look at how much the R-square improves. The increase in R-square between the model that does not use the stock price information and the model that does (called the partial R-square) measures the contribution of the stock price information to forecast future earnings. This is what is plotted in Figure 1. The red line corresponds to the model forecasting earnings at a five year horizon and the blue line to the model forecasting earnings at a one year horizon.</p>
 
 <p>&nbsp;<br>
 <a href="20210128-gamestop"><span class="more">Previous post: What is happening with GameStop &#187;</span></a><br>
