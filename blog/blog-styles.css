@@ -27,6 +27,31 @@ a:hover, a:active {
 	font-size: 14px;
 	color: #666666;
 }
+
+.titlecomment {
+	font-family: "Arial";
+	font-size: 20px;
+	color: #000066;
+	font-weight: bold;
+}
+.namecomment {
+	font-family: "Arial";
+	font-size: 20px;
+	color: #000066;
+	font-style: italic;
+}
+.comment {
+	font-family: "Times New Roman";
+	line-height: 1.5;
+	font-size: 18px;
+}
+.reply {
+	font-family: "Times New Roman";
+	line-height: 1.5;
+	font-size: 18px;
+	margin-left: 40px;
+}
+
 .text {
 	font-family: "Times New Roman";
 	line-height: 1.5;
