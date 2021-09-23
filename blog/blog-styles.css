@@ -40,6 +40,12 @@ a:hover, a:active {
 	color: #000066;
 	font-style: italic;
 }
+.datecomment {
+	font-family: "Arial";
+	font-size: 12px;
+	color: #000066;
+	font-style: italic;
+}
 .comment {
 	font-family: "Times New Roman";
 	line-height: 1.5;
