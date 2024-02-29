@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>Johan Hombert</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164217576-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -8,487 +11,310 @@
   gtag('js', new Date());
   gtag('config', 'UA-164217576-1');
 </script>
-<style type="text/css">
-<!--
-a:link, a:visited {
-	font-family: Arial;
-	text-decoration: none;
-	color: #000099;
-}
-a:hover, a:active {
-	font-family: Arial;
-	text-decoration: underline;
-	color: #000099;
-}
-.headline {
-	font-family: Arial;
-	font-size: 24px;
-	font-weight: bold;
-}
-.text {
-	font-family: Arial;
-	font-size: 16px;
-}
-.title {
-	font-family: Arial;
-	font-size: 16px;
-	font-weight: bold;
-	color: #000066;
-}
-.journal {
-	font-family: Arial;
-	font-size: 16px;
-	font-style: italic;
-}
-.description {
-	font-family: Arial;
-	font-size: 16px;
-	color: #333333;
-}
--->
-</style>
 
 <style>
-table {
-  width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 0;
-  spacing: 0;
-  padding: 0;
+/* Create a container for the page, that occupies 900px of the width of the page, or 100% if the page is too narrow.*/
+.container {
+	width: min(800px, 100%);
+	margin: 0 auto; /* Center horizontally */
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3A5791;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+	text-align: center;
+    justify-content: space-between;
+}
+
+header div {
+	width: calc(100% - 200px); /* Set the width of the right column */
+}
+
+/* Media query for narrow screens */
+@media (max-width: 800px) {
+    header {
+		flex-direction: column; /* Change to column direction on narrow screens */
+        text-align: center;
+    }
+	header div {
+		width: 100%; /* Full width for text on narrow screens */
+	}
+}
+
+header img {
+	border-radius: 50%; /* Make the image circular (optional) */
+	max width: 200px;
+    height: auto;
+}
+
+header a {
+	color: orange;
+    text-decoration: none;
+}
+
+h2 {
+	background-color: #3A5791;
+	/*background-color: #79C;*/
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #2233DD;
+	justify-content: center;
+}
+
+section {
+    margin: 20px 0;
+}
+
+section a {
+	color: #FF6000;
+    text-decoration: underline;
+}
+
+section img {
+	width: min(600px, 100%);
+    height: auto;
+}
+
+.paper {
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #2233DD;
+}
+
+.journal {
+	font-style: italic;
+}
+
+footer {
+	background-color: #3A5791;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.toggle-button {
+	cursor: pointer;
+    color: #FF6000;
+	text-align: center;
+    text-decoration: underline;
+}
+.seemore {
+	display: none; /* Hide the description by default */
+	width: min(400px, 100%);
+	margin: 0 auto; /* Center horizontally */
+}
+.legend{
+	font-size: .9em;
+	font-style: italic;
+}
+
 </style>
-
 </head>
+
 <body>
+<div class="container">
+
+<header>
+    <img src="photo2023.jpg" width="200">
+	<div>
+        <h1>Johan Hombert</h1>
+        <p>Professor of Finance, HEC Paris</p>
+		<p>Director of the <a href="https://www.hec.edu/en/doctoral-program" target="_blank">HEC Paris PhD Program</a></p>
+		<p>Email: <a href="mailto:hombert@hec.fr" target="_blank">hombert@hec.fr</a></p>
+		<p><a href="CV_Hombert.pdf">Curriculum Vitae</a></p>
+		<p><a href="https://scholar.google.com/citations?user=dl2D4z0AAAAJ&hl=en" target="_blank">Google Scholar Page</a></p>
+	</div>
+</header>
+
+<section>
+	<p>Check out <a href="https://johanhombert.github.io/blog" target="_blank">my blog!</a> Short and pedagogical articles connecting ideas from finance classes, academic research, and real-world problems.</p>
+	<p>I co-organize the <a href="https://hecparisentrepreneurship.github.io/" target="_blank">HEC Paris Entrepreneurship Workshop</a> help every year in December on the HEC Paris campus. The next call for papers will be out this summer.</p>
+</section>
+
+<h2>Working Papers</h2>
+
+<section>
+	<h3>Contract Completeness of Company Bylaws and Entrepreneurial Success</h3>
+	<p>with Paul Beaumont and Adrien Matray</p>
+	<p>Entrepreneurial success is fostered by a 2008 French reform that reduced the cost for entrepreneurs to write more complete contracts with their financiers.
+    <div class="toggle-button" onclick="toggleDescription('fig-bylaws')">See more in picture</div></p>
+    <p><div class="seemore" id="fig-bylaws"><img src="fig-bylaws.png"><br><span class="legend">Until the 2008 reform, less than 5% of new firms opted for the corporate legal form that allows firms to write complex bylaws. This share increased above 15% after the reform. We show that, by allowing entrepreneurs to write more complete contracts with investors, the reform fostered entrepreneurial success.</span></div></p>
+	<p><i>Draft coming soon!</i></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_Matray_TechBubble.pdf" target="_blank" class="paper">Innovation Booms, Easy Financing, and Human Capital Accumulation</a></h3>
+	<p>with Adrien Matray</p>
+	<p>The late 1990s tech bubble attracted many high-skill young workers, who initially enjoyed higher wages. In the long run, however, they end up earning 6% less than individuals who started in other sectors. The long-run wage discount is concentrated in firms that received high capital flow during the bubble.
+    <div class="toggle-button" onclick="toggleDescription('fig-bubble')">See more in picture</div></p>
+    <p><div class="seemore" id="fig-bubble"><img src="fig-bubble.png"><br><span class="legend">The figure shows the earnings premium of ICT workers relative to non-ICT workers. Each color is a different cohort of workers. ICT workers who started during the late 1990s technology boom initially enjoyed an earnings premium, which turned into a discount fifteen years out.</span></div></p>
+	<p><a href="Hombert_Matray_TechBubble.pdf" target="_blank">[pdf]</a> <a href="TechBubble_ReplicationPackage.zip" target="_blank">[replication package]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank" class="paper">Inter-Cohort Risk Sharing with Long-Term Guarantees: Evidence from German Participating Contracts</a></h3>
+	<p>with Axel M&ouml;hlmann and Matthias Weiss</p>
+	<p>Private implementation of inter-cohort risk sharing in German life insurance contracts. Compared to the French life insurance market analyzed in Hombert and Lyonnet (RFS 2022), long-term guarantees are higher in Germany and lean against inter-cohort risk sharing.
+    <div class="toggle-button" onclick="toggleDescription('fig-risk-sharing-germany')">See more in picture</div></p>
+    <p><div class="seemore" id="fig-risk-sharing-germany"><img src="fig-risk-sharing-germany.png"><br><span class="legend">Life insurers use reserves to absorb shocks to the return on assets held (blue) and smooth the return paid to their customers (orange). This smoothing mechanism generates risk sharing between cohorts of investors.</span></div></p>
+	<p><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank">[pdf]</a></p>
+</section>
+
+<h2>Publications</h2>
+
+<section>
+	<h3><a href="Hombert_Lyonnet_2022RFS_RiskSharing.pdf" class="paper">Can Risk be Shared Across Investor Cohorts? Evidence from a Popular Savings Product</a></h3>
+	<p><span class="journal">Review of Financial Studies, 2022</span> (with Victor Lyonnet)</p>
+	<p>Private implementation of inter-cohort risk sharing on a large scale: savings products sold by life insurers in France transfer 0.8% of GDP across cohorts of investors every year. <div class="toggle-button" onclick="toggleDescription('fig-risk-sharing-france')">See more in picture</div></p>
+    <p><div class="seemore" id="fig-risk-sharing-france"><img src="fig-risk-sharing-france.png"><br><span class="legend">Life insurers use reserves to absorb shocks to the return on assets held (red) and smooth the return paid to their customers (blue). This smoothing mechanism generates risk sharing between cohorts of investors.</span></div></p>
+	<p><a href="Hombert_Lyonnet_2022RFS_RiskSharing.pdf">[pdf]</a>  <a href="Hombert_Lyonnet_2022RFS_RiskSharing_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2021AER_ICAssetPricing.pdf" class="paper">Incentive Constrained Risk Sharing, Segmentation, and Asset Pricing</a></h3>
+	<p>with Bruno Biais and Pierre-Olivier Weill</p>
+	<p class="journal">American Economic Review, 2021</p>
+	<p>When imperfect asset pledgeability creates endogenous borrowing constraints, asset markets are endogenously segmented, assets trade at a discount relative to replicating portfolios of derivatives, and expected excess returns are concave in beta.</p>
+	<p><a href="Hombert_2021AER_ICAssetPricing.pdf">[pdf]</a>  <a href="Hombert_2021AER_ICAssetPricing_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2020JF_UIEntrepreneurs.pdf" class="paper">Can Unemployment Insurance Spur Entrepreneurial Activity? Evidence from France</a></h3>
+	<p>with Antoinette Schoar, David Sraer and David Thesmar</p>
+	<p class="journal">Journal of Finance, 2020</p>
+	<p>Giving unemployment benefits to entrepreneurs leads to the entry of small firms which eventually grow, and fosters creative destruction. <div class="toggle-button" onclick="toggleDescription('fig-ui-entrepreneurs')">See more in picture</div></p>
+    <p><div class="seemore" id="fig-ui-entrepreneurs"><img src="fig-ui-entrepreneurs.png"><br><span class="legend">After a 2002 French reform made entrepreneurs eligible to unemployment benefits, business creation increased by 25%. We show that the reform did not decrease the average quality and growth rate of start-ups.</span></div></p>
+	<p><a href="Hombert_2020JF_UIEntrepreneurs.pdf">[pdf]</a> <a href="Hombert_2020JF_UIEntrepreneurs_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2019JIE_VerticalMergers.pdf" class="paper">Anticompetitive Vertical Mergers Waves</a></h3>
+	<p>with Jerome Pouyet and Nicolas Schutz</p>
+	<p class="journal">Journal of Industrial Economics, 2019</p>
+	<p>Vertical mergers that relax competition.</p>
+	<p><a href="Hombert_2019JIE_VerticalMergers.pdf">[pdf]</a> <a href="Hombert_2019JIE_VerticalMergers_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2018JF_InnovationChina.pdf" class="paper">Can Innovation Help U.S. Manufacturing Firms Escape Import Competition from China?</a></h3>
+	<p>with Adrien Matray</p>
+	<p class="journal">Journal of Finance, 2018</p>
+	<p>U.S. manufacturing firms that have invested in R&amp;D are more resilient to trade shocks.</p>
+	<p><a href="Hombert_2018JF_InnovationChina.pdf">[pdf]</a> <a href="Hombert_2018JF_InnovationChina_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2018JBF_BankMegamerger.pdf" class="paper">The Competitive Effect of a Bank Megamerger on Credit Supply</a></h3>
+	<p>with Henri Fraisse and Mathias Le</p>
+	<p class="journal">Journal of Banking and Finance, 2018</p>
+	<p>A merger between two large European banks reduces credit supply to SMEs.</p>
+	<p><a href="Hombert_2018JBF_BankMegamerger.pdf">[pdf]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2017RFS_InnovationBanks.pdf" class="paper">The Real Effects of Lending Relationships on Innovative Firms and Inventor Mobility</a></h3>
+	<p>with Adrien Matray</p>
+	<p class="journal">Review of Financial Studies, 2017</p>
+	<p>Hurting lending relationships stiffles innovation and leads to reallocation of inventors across firms and across states.</p>
+	<p><a href="Hombert_2017RFS_InnovationBanks.pdf">[pdf]</a> <a href="http://www.voxeu.org/article/funding-innovation-how-important-how-much" target="_blank">[vox summary]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2016JF_NewsTrading.pdf" class="paper">News Trading and Speed</a></h3>
+	<p>with Thierry Foucault and Ioanid Rosu</p>
+	<p class="journal">Journal of Finance, 2016</p>
+	<p>Traders who observe news faster than others have extremely volatile ("high-frequency") strategies.</p>
+	<p><a href="Hombert_2016JF_NewsTrading.pdf">[pdf]</a> <a href="Hombert_2016JF_NewsTrading_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2014RES_PreferenceUncertainty.pdf" class="paper">Equilibrium Pricing and Trading Volume under Preference Uncertainty</a></h3>
+	<p>with Bruno Biais and Pierre-Olivier Weill</p>
+	<p class="journal">Review of Economic Studies, 2014</p>
+	<p>Asset pricing when traders make decisions under preference uncertainty, because their financial firms face challenges collecting, processing, and disseminating information.</p>
+	<p><a href="Hombert_2014RES_PreferenceUncertainty.pdf">[pdf]</a> <a href="Hombert_2014RES_PreferenceUncertainty_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2014JFE_LimitsArbitrage.pdf" class="paper">Overcoming Limits of Arbitrage: Theory and Evidence</a></h3>
+	<p>with David Thesmar</p>
+	<p class="journal">Journal of Financial Economics, 2014</p>
+	<p>Arbitrageurs can choose their capital structure to take advantage of temporary mispricing: theory and evidence.</p>
+	<p><a href="Hombert_2014JFE_LimitsArbitrage.pdf">[pdf]</a></p>
+</section>
+
+<section>
+	<h3><a href="Hombert_2011JIE_VerticalCompetition.pdf" class="paper">Upstream Competition between Vertically Integrated Firms</a></h3>
+	<p>with Marc Bourreau, Jerome Pouyet and Nicolas Schutz</p>
+	<p class="journal">Journal of Industrial Economics, 2011</p>
+	<p>Competition between vertically integrated firms can fail.</p>
+	<p><a href="Hombert_2011JIE_VerticalCompetition.pdf">[pdf]</a> <a href="Hombert_2011JIE_VerticalCompetition_supp.pdf">[supplementary appendix]</a></p>
+</section>
+
+<h2>Other Publications</h2>
+
+<section>
+	<h3><a href="Hombert_2017NBER_EntrepreneursSelection.pdf" class="paper">Does Unemployment Insurance Change the Selection into Entrepreneurship?</a></h3>
+	<p>with Antoinette Schoar, David Sraer and David Thesmar</p>
+	<p class="journal">NBER book Measuring Entrepreneurial Businesses: Current Knowledge and Challenges, 2017</p>
+	<p>Giving unemployment benefits to entrepreneurs does not deteriorate the success potential of start-ups.</p>
+	<p><a href="Hombert_2017NBER_EntrepreneursSelection.pdf">[pdf]</a></p>
+</section>
+
+<h2>Current and Former PhD Students</h2>
+
+<section>
+	<p><a href="https://huan-tang.com/" target="_blank">Huan Tang</a> London School of Economics (Finance) &#8594; Wharton (Finance)</p>
+	<p><a href="https://npinardontouati.github.io/" target="_blank">No&eacute;mie Pinardon-Touati</a> University of Columbia (Economics)</p>
+    <p><a href="https://sites.google.com/view/chhavi-rastogi/home" target="_blank">Chhavi Rastogi</a> International Finance Corporation, World Bank</p>
+    <p><a href="https://sites.google.com/view/marina-traversa/home" target="_blank">Marina Traversa</a> Leibniz Institute - SAFE (post-doc)</p>
+    <p><a href="https://antoinehubertdefraisse.github.io/" target="_blank">Antoine Hubert de Fraisse</a> on the job market in 2024-25</p>
+  </table
+</section>
 
 
+<footer>
+	<p>&copy; 2024 Johan Hombert. All rights reserved.</p>
+</footer>
 
-<table width="100%" border="0" cellspacing="15" cellpadding="1">
+</div>
 
-  <tr valign="top">
-    <td width="175">
-      <img src="photo2023.jpg" width="175" border="0">
-    </td>
-    <td valign="top">
-      <table width="100%" border="0" cellspacing="0" cellpadding="5">
-	  <tr><td class="headline">Johan HOMBERT</td></tr>
-	  <tr><td class="text">Professor of Finance, Associate Dean PhD Director, HEC Paris</td></tr>
-	  <tr><td class="text">Email: <a href="mailto:hombert@hec.fr" target="_blank">hombert@hec.fr</a></td></tr>
-	  <tr><td class="text"><a href="CV_Hombert.pdf">Curriculum Vitae</a></td></tr>
-  	  <tr><td class="text"><a href="https://scholar.google.com/citations?user=dl2D4z0AAAAJ&hl=fr" target="_blank">Google Scholar Page</a></td></tr>
-      </table>
-    </td>
-  </tr>
-
-</table>
-
-
-
-<table width="100%" cellspacing="15" cellpadding="1">
-
-<!--
-<tr><td height="40" valign="bottom" class="headline">News</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>-->
-
-<!--
-<tr><td class="text"><b>Summer School <i>"Incentives in Finance"</i></b> on August 30th 2023 at HEC Paris</font> <a href="Slides_Hombert_ICAP.pdf">[lecture slides]</a></td></tr>
--->
-
-<!--<tr><td class="text"><font color="#0033FF"></font>The call for paper for the <a href="https://hecparisentrepreneurship.github.io/" target="_blank">HEC Paris Entrepreneurship Workshop</a> is out. Submit before September 15, 2023 and join us at HEC Paris on December 14-15.</td></tr>-->
-
-<!--<tr><td class="text"><font color="#0033FF"></font>Join us at the <font color="#FF6600"><b><a href="https://hecparisentrepreneurship.github.io/" target="_blank">HEC Paris Entrepreneurship Workshop</a></b></font> on December 14-15.</td></tr>-->
-
-<!--<tr><td class="text">Submit a paper to the <font color="#FF6600"><b><a href="https://www.adamsmithworkshop.com/" target="_blank">Adam Smith Workshop</a></b></font> before November 20 2023. This year, the workshop will be at the London School of Economics on April 18-19 2024.</td></tr>-->
-
-<tr><td class="text"><a href="https://johanhombert.github.io/blog" target="_blank"><font color="#FF6600"><b><i>CHECK OUT MY BLOG!</i></b></font></a> Short articles connecting ideas from finance classes, academic research, and real-world problems. <a href="https://johanhombert.github.io/blog" target="_blank">[read here]</a></td></tr>
-
-
-
-
-<tr><td height="60" valign="bottom" class="headline">Working Papers</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>
-<tr><td>
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">
-     
-	<tr>
-    <td width="200" valign="top" align="center">
-	  <img src="Hombert_TechBubble.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_Matray_TechBubble.pdf" target="_blank">Innovation Booms, Easy Financing, and Human Capital Accumulation</a></td></tr>
-	    <tr><td class="text">with Adrien Matray</td></tr>
-		<tr><td class="description">The late 1990s tech bubble attracted many high-skill young workers, who initially enjoyed higher wages. In the long run, however, they end up earning 6% less than individuals who started in other sectors. The long-run wage discount is concentrated in firms that received high capital flow during the bubble.</td></tr>
-		<tr><td class="text"><a href="Hombert_Matray_TechBubble.pdf" target="_blank">[pdf]</a> <a href="TechBubble_ReplicationPackage.zip" target="_blank">[replication package]</a></td></tr>
-		</table>
-	</td>
-  </tr>  
-
-	<tr>
-    <td width="200" valign="top" align="center">
-	  <img src="Hombert_Risk_Sharing_Germany.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank"></a></td></tr>
-	    <tr><td class="text"></td></tr>
-		<tr><td class="description"></td></tr>
-		<tr><td class="text"><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank">[pdf]</a></td></tr>
-		</table>
-	</td>
-  </tr>  
-
-	<tr>
-    <td width="200" valign="top" align="center">
-	  <img src="Hombert_Bylaws.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Contract Completeness of Company Bylaws and Entrepreneurial Success</td></tr>
-	    <tr><td class="text">with Paul Beaumont and Adrien Matray</td></tr>
-		<tr><td class="description">A 2008 French reform that reduces the cost for entrepreneurs to write more complete contracts with their financiers enhances entrepreneurial success.</td></tr>
-		<tr><td class="text"><i>Draft coming soon!</i></td></tr>
-		</table>
-	</td>
-  </tr>  
-
-  </table></td></tr>
-
-
-
-<tr><td height="60" valign="bottom" class="headline">Publications</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>
-
-<tr><td>
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">
-
-	<tr>
-    <td width="200" valign="top" align="center">
-	  <img src="Hombert_RiskSharing.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_Lyonnet_2022RFS_RiskSharing.pdf">Can Risk be Shared Across Investor Cohorts? Evidence from a Popular Savings Product</a></td></tr>
-	    <tr><td class="text">with Victor Lyonnet</td></tr>
-		<tr><td class="journal">Review of Financial Studies, 2022</td></tr>
-		<tr><td class="description">Private implementation of inter-cohort risk sharing on a large scale: savings products sold by life insurers in France transfer 0.8% of GDP across cohorts of investors every year.</td></tr>
-		<tr><td class="text"><a href="Hombert_Lyonnet_2022RFS_RiskSharing.pdf">[pdf]</a>  <a href="Hombert_Lyonnet_2022RFS_RiskSharing_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top" align="center">
-	  <img src="Hombert_ICassetpricing.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_ICassetpricing.pdf">Incentive Constrained Risk Sharing, Segmentation, and Asset Pricing</a></td></tr>
-	    <tr><td class="text">with Bruno Biais and Pierre-Olivier Weill</td></tr>
-		<tr><td class="journal">American Economic Review, 2021</td></tr>
-		<tr><td class="description">When imperfect asset pledgeability creates endogenous borrowing constraints, asset markets are endogenously segmented, assets trade at a discount relative to replicating portfolios of derivatives, and expected excess returns are concave in beta.</td></tr>
-		<tr><td class="text"><a href="Hombert_2021AER_ICAssetPricing.pdf">[pdf]</a>  <a href="Hombert_2021AER_ICAssetPricing_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2020JF_UIEntrepreneurs.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2020JF_UIEntrepreneurs.pdf">Can Unemployment Insurance Spur Entrepreneurial Activity? Evidence from France</a></td></tr>
-	    <tr><td class="text">with Antoinette Schoar, David Sraer and David Thesmar</td></tr>
-	    <tr><td class="journal">Journal of Finance, 2020</td></tr>
-            <tr><td class="description">Giving unemployment benefits to entrepreneurs leads to the entry of small firms which eventually grow, and fosters creative destruction.</td></tr>
-	    <tr><td class="text"><a href="Hombert_2020JF_UIEntrepreneurs.pdf">[pdf]</a> <a href="Hombert_2020JF_UIEntrepreneurs_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2019JIE_VerticalMergers.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2019JIE_VerticalMergers.pdf">Anticompetitive Vertical Mergers Waves</a></td></tr>
-	    <tr><td class="text">with Jerome Pouyet and Nicolas Schutz</td></tr>
-		<tr><td class="journal">Journal of Industrial Economics, 2019</td></tr>
-		<tr><td class="description">Vertical mergers relax competition.</td></tr>
-		<tr><td class="text"><a href="Hombert_2019JIE_VerticalMergers.pdf">[pdf]</a> <a href="Hombert_2019JIE_VerticalMergers_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-    <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2018JF_InnovationChina.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2018JF_InnovationChina.pdf">Can Innovation Help U.S. Manufacturing Firms Escape Import Competition from China?</a></td></tr>
-	    <tr><td class="text">with Adrien Matray</td></tr>
-		<tr><td class="journal">Journal of Finance, 2018</td></tr>
-		<tr><td class="description">U.S. manufacturing firms that have invested in R&amp;D are more resilient to trade shocks.</td></tr>
-		<tr><td class="text"><a href="Hombert_2018JF_InnovationChina.pdf">[pdf]</a> <a href="Hombert_2018JF_InnovationChina_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2018JBF_BankMegamerger.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2018JBF_BankMegamerger.pdf">The Competitive Effect of a Bank Megamerger on Credit Supply</a></td></tr>
-	    <tr><td class="text">with Henri Fraisse and Mathias Le</td></tr>
-		<tr><td class="journal">Journal of Banking and Finance, 2018</td></tr>
-		<tr><td class="description">A merger between two large European banks reduces credit supply to SMEs.</td></tr>
-		<tr><td class="text"><a href="Hombert_2018JBF_BankMegamerger.pdf">[pdf]</a></td></tr>
-		</table>
-	</td>
-  </tr>
-
-	<tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2017RFS_InnovationBanks.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2017RFS_InnovationBanks.pdf">The Real Effects of Lending Relationships on Innovative Firms and Inventor Mobility</a></td></tr>
-	    <tr><td class="text">with Adrien Matray</td></tr>
-		<tr><td class="journal">Review of Financial Studies, 2017</td></tr>
-		<tr><td class="description">Hurting lending relationships stiffles innovation and leads to reallocation of inventors across firms and across states.</td></tr>
-		<tr><td class="text"><a href="Hombert_2017RFS_InnovationBanks.pdf">[pdf]</a> <a href="http://www.voxeu.org/article/funding-innovation-how-important-how-much" target="_blank">[vox summary]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2016JF_NewsTrading.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2016JF_NewsTrading.pdf">News Trading and Speed</a></td></tr>
-	    <tr><td class="text">with Thierry Foucault and Ioanid Rosu</td></tr>
-		<tr><td class="journal">Journal of Finance, 2016</td></tr>
-		<tr><td class="description">Traders who observe news faster than others have extremely volatile ("high-frequency") strategies.</td></tr>
-		<tr><td class="text"><a href="Hombert_2016JF_NewsTrading.pdf">[pdf]</a> <a href="Hombert_2016JF_NewsTrading_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2014RES_PreferenceUncertainty.png" width="200" border="1">
-	</td>
-	<td width="100%" valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2014RES_PreferenceUncertainty.pdf">Equilibrium Pricing and Trading Volume under Preference Uncertainty</a></td></tr>
-	    <tr><td class="text">with Bruno Biais and Pierre-Olivier Weill</td></tr>
-		<tr><td class="journal">Review of Economic Studies, 2014</td></tr>
-		<tr><td class="description">Asset pricing when traders make decisions under preference uncertainty, because their financial firms face challenges collecting, processing, and disseminating information.</td></tr>
-		<tr><td class="text"><a href="Hombert_2014RES_PreferenceUncertainty.pdf">[pdf]</a> <a href="Hombert_2014RES_PreferenceUncertainty_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2014JFE_LimitsArbitrage.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2014JFE_LimitsArbitrage.pdf">Overcoming Limits of Arbitrage: Theory and Evidence</a></td></tr>
-	    <tr><td class="text">with David Thesmar</td></tr>
-		<tr><td class="journal">Journal of Financial Economics, 2014</td></tr>
-		<tr><td class="description">Arbitrageurs can choose their capital structure to take advantage of temporary mispricing: theory and evidence.</td></tr>
-		<tr><td class="text"><a href="Hombert_2014JFE_LimitsArbitrage.pdf">[pdf]</a></td></tr>
-		</table>
-	</td>
-  </tr>
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2011JIE_VerticalCompetition.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2011JIE_VerticalCompetition.pdf">Upstream Competition between Vertically Integrated Firms</a></td></tr>
-	    <tr><td class="text">with Marc Bourreau, Jerome Pouyet and Nicolas Schutz</td></tr>
-		<tr><td class="journal">Journal of Industrial Economics, 2011</td></tr>
-		<tr><td class="description">Competition between vertically integrated firms can fail.</td></tr>
-		<tr><td class="text"><a href="Hombert_2011JIE_VerticalCompetition.pdf">[pdf]</a> <a href="Hombert_2011JIE_VerticalCompetition_supp.pdf">[supplementary appendix]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  </table></td></tr>  
-
-
-
-<tr><td height="60" valign="bottom" class="headline">Other Publications</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>
-<tr><td>
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">
-
-    <tr>
-    <td width="200" valign="top">
-	  <img src="Hombert_2017NBER_EntrepreneursSelection.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title"><a href="Hombert_2017NBER_EntrepreneursSelection.pdf">Does Unemployment Insurance Change the Selection into Entrepreneurship?</a></td></tr>
-	    <tr><td class="text">with Antoinette Schoar, David Sraer and David Thesmar</td></tr>
-		<tr><td class="journal">NBER book Measuring Entrepreneurial Businesses: Current Knowledge and Challenges, 2017</td></tr>
-		<tr><td class="description">Giving unemployment benefits to entrepreneurs does not deteriorate the success potential of start-ups.</td></tr>
-		<tr><td class="text"><a href="Hombert_2017NBER_EntrepreneursSelection.pdf">[pdf]</a></td></tr>
-	  </table>
-	</td>
-  </tr>
-  
-  </table></td></tr>
-
-
-
-
-<tr><td height="60" valign="bottom" class="headline">Work in Progress</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>
-<tr><td>
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">
-     
-  <tr>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Do Loan Guarantees Spur Entrepreneurship?</td></tr>
-	    <tr><td class="text">with Alexandre Gazaniol, No&eacute;mie Pinardon-Touati and Fr&eacute;d&eacute;ric Vinas</td></tr>
-	  </table>
-	</td>
-  </tr>
-
-  </table>
-</td></tr>
-  
-  
- 
-<tr><td height="60" valign="bottom" class="headline">Current and Former PhD Students</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>
-<tr><td>
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">
-    <tr><td class="text"><a href="https://huan-tang.com/" target="_blank">Huan Tang</a> London School of Economics (Finance) &#8594; Wharton (Finance)</td></tr>
-    <tr><td class="text"><a href="https://npinardontouati.github.io/" target="_blank">No&eacute;mie Pinardon-Touati</a> University of Columbia (Economics)</td></tr>
-    <tr><td class="text"><a href="https://sites.google.com/view/chhavi-rastogi/home" target="_blank">Chhavi Rastogi</a> International Finance Corporation, World Bank</td></tr>
-    <tr><td class="text"><a href="https://sites.google.com/view/marina-traversa/home" target="_blank">Marina Traversa</a> Leibniz Institute - SAFE (post-doc)</td></tr>
-    <tr><td class="text"><a href="https://antoinehubertdefraisse.github.io/" target="_blank">Antoine Hubert de Fraisse</a> (ongoing)</td></tr>
-  </table>
-</td></tr>
-
-
-
-<!--
-<tr><td height="60" valign="bottom" class="headline">Teaching</td></tr>
-<tr><td height="1" bgcolor="#000000"></td></tr>
-<tr><td>
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">  
- -->
-
-<!--
-  <tr>
-    <td width="200" valign="top">
-	  <img src="FinancialMarkets.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Financial Markets</td></tr>
-	    <tr><td class="text">L3/M1 level, <a href="https://www.hec.edu/en/master-s-programs/master-management" target="_blank">Master in Management, HEC Paris</a></td></tr>
-		<tr><td class="text">I write short articles posted <b><a href="https://johanhombert.github.io/blog" target="_blank"><font color="#FF6600">on my blog</font></a></b> showing how to use tools learned in the Financial Markets class to explain current events in financial markets</td></tr>
-	  </table>
-	</td>
-  </tr>  
--->
-
-<!--
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="AdvancedFinance.png" width="200" border="0">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Advanced Finance</td></tr>
-	    <tr><td class="text">M1 level, <a href="https://www.hec.edu/en/master-s-programs/master-management" target="_blank">Master in Management, HEC Paris</a></td></tr>
-	  </table>
-	</td>
-  </tr>  
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="FinanceData.png" width="200" border="0">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Finance for Data Scientists</td></tr>
-	    <tr><td class="text">M2 level, <a href="https://www.hec.edu/en/master-s-programs/x-hec-programs/msc-data-science-business-x-hec" target="_blank">MSc Data Science for Business, HEC Paris &ndash; IP Paris</a></td></tr>
-	  </table>
-	</td>
-  </tr>  
-
-  <tr>
-    <td width="200" valign="top">
-	  <img src="Microeconomics.png" width="200" border="0">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Microeconomics 1</td></tr>
-	    <tr><td class="text">PhD level, <a href="http://phd-in-economics.com/index.php" target="_blank">Master in Economics, HEC Paris &ndash; IP Paris</a></td></tr>
-	  </table>
-	</td>
-  </tr>  
- -->
-
-
-<!--
-  <tr>
-    <td width="200" valign="top">
-	  <img src="InefficientFinancialMarkets.png" width="200" border="1">
-	</td>
-	<td valign="top">
-	  <table border="0" cellspacing="0" cellpadding="3">
-	    <tr><td class="title">Topics in Asset Pricing</td></tr>
-	    <tr><td class="text"><a href="https://www.hec.edu/en/doctoral-program" target="_blank">PhD HEC Paris</a>
-		and <a href="https://www.hec.edu/en/doctoral-program/research-areas/finance" target="_blank">Master in Economics</a>
-		</td></tr>
-		
-		<tr><td class="text">
-		  Lectures:
-		  <a href="TAP_lecture1.pdf">[1 Anomalies]</a>&nbsp;
-		  <a href="TAP_lecture2.pdf">[2 Limits to arbitrage]</a>&nbsp;
-		  <a href="TAP_lecture3.pdf">[3 Beliefs]</a>&nbsp;
-		  <a href="TAP_lecture4.pdf">[4 Real effects]</a>
-		</td></tr>
-		<tr><td class="text">
-		  Assignments
-		  <a href="TAP_assignment1.pdf">[1]</a>&nbsp;
-		  <a href="TAP_assignment2.pdf">[2]</a>&nbsp;
-		  <a href="TAP_assignment3.pdf">[3]</a>&nbsp;
-		  <a href="TAP_assignment4.pdf">[4]</a>&nbsp;
-		  <a href="TAP_assignment5.pdf">[5]</a>&nbsp;
-		  <a href="TAP_assignment6.pdf">[6]</a>
-		</td></tr>		
-	  </table>
-	</td>
-  </tr>    
--->
-
-  </table></td></tr>
-
-</table>
+<script>
+// JavaScript function to toggle the visibility of the description
+function toggleDescription(descriptionId) {
+	var description = document.getElementById(descriptionId);
+    var toggleButton = document.querySelector('#' + descriptionId + ' + .toggle-button');
+	
+	// Toggle the display property
+	if (description.style.display === "none" || description.style.display === "") {
+		description.style.display = "block";
+		toggleButton.innerText = 'Show less';
+	} else {
+		description.style.display = "none";
+		toggleButton.innerText = 'Show more in picture';
+	}
+}
+</script>
 
 </body>
 </html>
