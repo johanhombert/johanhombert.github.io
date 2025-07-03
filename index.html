@@ -94,9 +94,10 @@ section img {
 }
 
 .paper {
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: bold;
 	color: #2233DD;
+    text-decoration: none;
 }
 
 .journal {
@@ -127,6 +128,19 @@ footer {
 	font-size: .9em;
 	font-style: italic;
 }
+.abstract{
+	font-size: 1em;
+}
+
+.toggle-button2 {
+	cursor: pointer;
+    color: #FF6000;
+    text-decoration: underline;
+}
+.seemore2 {
+	display: none; /* Hide the description by default */
+	margin: 0 auto; /* Center horizontally */
+}
 
 </style>
 </head>
@@ -148,9 +162,9 @@ footer {
 
 <section>
 	<!--<p><b><font color=#FF0033">Hi! PARIS Summer School (July 11, 2024)</font></b>: Go <a href="https://johanhombert.github.io/fintech" target="_blank">HERE</a> to access the material for the tutorial 6A Scoring Strategically: Application to Finance</p>-->
-	<p>Join the <a href="https://www.adamsmithworkshop.com/" target="_blank">Adam Smith Workshop in Asset Pricing and Corporate Finance</a>, which will be held at HEC Paris on April 10-11, 2025.</p>
+	<!--<p>Join the <a href="https://www.adamsmithworkshop.com/" target="_blank">Adam Smith Workshop in Asset Pricing and Corporate Finance</a>, which will be held at HEC Paris on April 10-11, 2025.</p>-->
 	<p>I co-organize the <a href="https://hecparisentrepreneurship.github.io/" target="_blank">HEC Paris Entrepreneurship Workshop</a> held every year in December on the HEC Paris campus. The call for the 2025 workshop will be out this summer.</p>
-	<p>Check out <a href="https://johanhombert.github.io/blog" target="_blank">my blog!</a> Short and pedagogical articles connecting ideas from finance classes, academic research, and real-world problems.</p>
+	<p>Check out <a href="https://johanhombert.github.io/blog" target="_blank">my blog</a>. Short and pedagogical articles connecting ideas from finance classes, academic research, and real-world problems.</p>
 </section>
 
 
@@ -158,41 +172,62 @@ footer {
 <h2>Working Papers</h2>
 
 <section>
-	<h3><font color="orange"><i>NEW!</i></font> The Real Effects of Valuation Mistakes: Estimates from Mergers and Acquisitions</h3>
-	<p>with François Derrien, Alexei Ovchinnikov and Philip Valta</p>
-	<p>Non-proportional thinking distorts merger premia and the likelihood of M&amp;A transactions. Our reduced-form evidence and structural estimation show that investors' mistakes reduce the frequency of M&amp;A transactions by about 8% and the value created by the M&amp;A market by about 1%.
-    <div class="toggle-button" onclick="toggleDescription('fig-mna')">See more in picture</div></p>
-    <p><div class="seemore" id="fig-mna"><img src="fig-mna.png"><br><span class="legend">The figure displays the average merger premium across bins of the target's pre-offer stock price. Investors subject to non-proportional thinking ask (too) high merger premia to sell low-price targets and offer (too) low merger premia to buy high-price targets.</span></div></p>
-	<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5163769" target="_blank">[pdf]</a></p>
+	<p><span class="paper">Cap and Trade with Imperfect Hedging</span> with Bruno Biais, Daniel Schmidt, and Pierre-Olivier Weill</p>
+	<p><div class="toggle-button2" onclick="toggleDescription('more-ets')">>> See more</div></p>
+    <p><div class="seemore2" id="more-ets">
+		<span class="abstract">In a cap-and-trade system, emitters face transition risk, due to variance in emissions caps and permit prices. We show, theoretically and empirically, that i) emitters hedge with emission permits futures bought from financials, ii) financial constraints limit hedging, in particular by limiting and delaying emitters' purchases of permits in the spot market, implying iii) permits prices are below the price of replicating portfolios of derivatives. To mitigate the adverse consequences of financial constraints, a benevolent planner reduces the variance of emissions caps. In spite of imperfections, constrained Pareto optima are implemented by appropriately designed cap-and-trade systems.</span><br>
+		<center><img src="fig-ets.png"><br>
+		<span class="legend">The price of emission permits in the EU has been volatile, especially since the 2018 with increasing uncertainty about climate policies.</span></center>
+	</div></p>
+	<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5308210" target="_blank">>> PDF</a></p>
 </section>
 
 <section>
-	<h3><a href="Hombert_Matray_TechBubble.pdf" target="_blank" class="paper">Innovation Booms, Easy Financing, and Human Capital Accumulation</a></h3>
-	<p>with Adrien Matray</p>
+	<p><span class="paper">The Real Effects of Valuation Mistakes: Estimates from Mergers and Acquisitions</span> with François Derrien, Alexei Ovchinnikov, and Philip Valta</p>
+	<p><div class="toggle-button2" onclick="toggleDescription('more-mna')">>> See more</div></p>
+    <p><div class="seemore2" id="more-mna">
+		<span class="abstract">Non-proportional thinking distorts merger premia and the likelihood of M&amp;A transactions. Our reduced-form evidence and structural estimation show that investors' mistakes reduce the frequency of M&amp;A transactions by about 8% and the value created by the M&amp;A market by about 1%.</span><br>
+		<center><img src="fig-mna.png"><br>
+		<span class="legend">The figure displays the average merger premium across bins of the target's pre-offer stock price. Investors subject to non-proportional thinking ask (too) high merger premia to sell low-price targets and offer (too) low merger premia to buy high-price targets.</span></center>
+	</div></p>
+	<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5163769" target="_blank">>> PDF</a></p>
+</section>
+
+<section>
+	<p><span class="paper">Contract Completeness of Company Bylaws and Entrepreneurial Success</span> with Paul Beaumont and Adrien Matray</p>
+	<p><div class="toggle-button2" onclick="toggleDescription('more-bylaws')">>> See more</div></p>
+    <p><div class="seemore2" id="more-bylaws">
+		<span class="abstract">Entrepreneurial success is fostered by a 2008 French reform that reduced the cost for entrepreneurs to write more complete contracts with their financiers.</span><br>
+		<center><img src="fig-bylaws.png"><br>
+		<span class="legend">Until the 2008 reform, less than 5% of new firms opted for the corporate legal form that allows firms to write complex bylaws. This share increased above 15% after the reform. We show that, by allowing entrepreneurs to write more complete contracts with investors, the reform fostered entrepreneurial success.</span></center>
+	</div></p>
+	<p>[Draft coming soon]</i></p>
+</section>
+
+<section>
+	<p><span class="paper">Innovation Booms, Easy Financing, and Human Capital Accumulation</span> with Adrien Matray</p>
 	<p>Revise &amp; Resubmit <span class="journal">Journal of Financial Economics</span></p>
-	<p>The late 1990s tech bubble attracted many high-skill young workers, who initially enjoyed higher wages. In the long run, however, they end up earning 6% less than individuals who started in other sectors. The long-run wage discount is concentrated in firms that received high capital flow during the bubble.
-    <div class="toggle-button" onclick="toggleDescription('fig-bubble')">See more in picture</div></p>
-    <p><div class="seemore" id="fig-bubble"><img src="fig-bubble.png"><br><span class="legend">The figure shows the earnings premium of ICT workers relative to non-ICT workers. Each color is a different cohort of workers. ICT workers who started during the late 1990s technology boom initially enjoyed an earnings premium, which turned into a discount fifteen years out.</span></div></p>
-	<p><a href="Hombert_Matray_TechBubble.pdf" target="_blank">[pdf]</a> <a href="TechBubble_ReplicationPackage.zip" target="_blank">[replication package]</a></p>
+	<p><div class="toggle-button2" onclick="toggleDescription('more-bubble')">>> See more</div></p>
+    <p><div class="seemore2" id="more-bubble">
+		<span class="abstract">The late 1990s tech bubble attracted many high-skill young workers, who initially enjoyed higher wages. In the long run, however, they end up earning 6% less than individuals who started in other sectors. The long-run wage discount is concentrated in firms that received high capital flow during the bubble.</span><br>
+		<center><img src="fig-bubble.png"><br>
+		<span class="legend">The figure shows the earnings premium of ICT workers relative to non-ICT workers. Each color is a different cohort of workers. ICT workers who started during the late 1990s technology boom initially enjoyed an earnings premium, which turned into a discount fifteen years out.</span></center>
+	</div></p>
+	<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4680746" target="_blank">>> PDF</a></p>
+	<p><a href="TechBubble_ReplicationPackage.zip" target="_blank">>> Replication package</a></p>
 </section>
 
 <section>
-	<h3><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank" class="paper">Inter-Cohort Risk Sharing with Long-Term Guarantees: Evidence from German Participating Contracts</a></h3>
-	<p>with Axel M&ouml;hlmann and Matthias Weiss</p>
-	<p>Private implementation of inter-cohort risk sharing in German life insurance contracts. Compared to the French life insurance market analyzed in Hombert and Lyonnet (RFS 2022), long-term guarantees are higher in Germany and lean against inter-cohort risk sharing.
-    <div class="toggle-button" onclick="toggleDescription('fig-risk-sharing-germany')">See more in picture</div></p>
-    <p><div class="seemore" id="fig-risk-sharing-germany"><img src="fig-risk-sharing-germany.png"><br><span class="legend">Life insurers use reserves to absorb shocks to the return on assets held (blue) and smooth the return paid to their customers (orange). This smoothing mechanism generates risk sharing between cohorts of investors.</span></div></p>
-	<p><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank">[pdf]</a></p>
+	<p><span class="paper">Inter-Cohort Risk Sharing with Long-Term Guarantees: Evidence from German Participating Contracts</span> with Axel Möhlmann and Matthias Weiss</p>
+	<p><div class="toggle-button2" onclick="toggleDescription('more-risk-sharing-germany')">>> See more</div></p>
+    <p><div class="seemore2" id="more-risk-sharing-germany">
+		<span class="abstract">Private implementation of inter-cohort risk sharing in German life insurance contracts. Compared to the French life insurance market analyzed in Hombert and Lyonnet (RFS 2022), long-term guarantees are higher in Germany and lean against inter-cohort risk sharing.</span><br>
+		<center><img src="fig-risk-sharing-germany.png"><br>
+		<span class="legend">Life insurers use reserves to absorb shocks to the return on assets held (blue) and smooth the return paid to their customers (orange). This smoothing mechanism generates risk sharing between cohorts of investors.</span></center>
+	</div></p>
+	<p><a href="Hombert_Risk_Sharing_Germany.pdf" target="_blank">>> PDF</a></p>
 </section>
 
-<section>
-	<h3>Contract Completeness of Company Bylaws and Entrepreneurial Success</h3>
-	<p>with Paul Beaumont and Adrien Matray</p>
-	<p>Entrepreneurial success is fostered by a 2008 French reform that reduced the cost for entrepreneurs to write more complete contracts with their financiers.
-    <div class="toggle-button" onclick="toggleDescription('fig-bylaws')">See more in picture</div></p>
-    <p><div class="seemore" id="fig-bylaws"><img src="fig-bylaws.png"><br><span class="legend">Until the 2008 reform, less than 5% of new firms opted for the corporate legal form that allows firms to write complex bylaws. This share increased above 15% after the reform. We show that, by allowing entrepreneurs to write more complete contracts with investors, the reform fostered entrepreneurial success.</span></div></p>
-	<p><i>Draft coming soon!</i></p>
-</section>
 
 
 
@@ -298,14 +333,14 @@ footer {
 	<p><a href="Hombert_2017NBER_EntrepreneursSelection.pdf">[pdf]</a></p>
 </section>
 
-<h2>Current and Former PhD Students</h2>
+<h2>Former PhD Students</h2>
 
 <section>
-	<p><a href="https://huan-tang.com/" target="_blank">Huan Tang</a> London School of Economics (Finance) &#8594; Wharton (Finance)</p>
-	<p><a href="https://npinardontouati.github.io/" target="_blank">No&eacute;mie Pinardon-Touati</a> University of Columbia (Economics)</p>
-    <p><a href="https://sites.google.com/view/chhavi-rastogi/home" target="_blank">Chhavi Rastogi</a> International Finance Corporation, World Bank</p>
-    <p><a href="https://sites.google.com/view/marina-traversa/home" target="_blank">Marina Traversa</a> Leibniz Institute - SAFE (post-doc)</p>
-    <p><a href="https://antoinehubertdefraisse.github.io/" target="_blank">Antoine Hubert de Fraisse</a> on the job market in 2024-25</p>
+    <p><a href="https://antoinehubertdefraisse.github.io/" target="_blank">Antoine Hubert de Fraisse</a> (2025) London School of Economics (Finance)</p>
+    <p><a href="https://sites.google.com/view/marina-traversa/home" target="_blank">Marina Traversa</a> (2023) Leibniz Institute - SAFE (post-doc)</p>
+    <p><a href="https://sites.google.com/view/chhavi-rastogi/home" target="_blank">Chhavi Rastogi</a> (2022) International Finance Corporation, World Bank</p>
+	<p><a href="https://npinardontouati.github.io/" target="_blank">No&eacute;mie Pinardon-Touati</a> (2022) University of Columbia (Economics)</p>
+	<p><a href="https://huan-tang.com/" target="_blank">Huan Tang</a> (2020) London School of Economics (Finance) &#8594; Wharton (Finance)</p>
   </table
 </section>
 
